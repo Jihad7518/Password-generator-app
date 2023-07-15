@@ -25,3 +25,19 @@
     --vb-cyan2: hsl(177, 92%, 70%);
     --dk-text: hsl(198, 20%, 13%);
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(61,5,36);
+    background: linear-gradient(90deg, rgba(61,5,36,1) 53%, rgba(36,27,89,1) 100%, rgba(88,30,138,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+}
