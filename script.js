@@ -114,3 +114,17 @@ function shufflePassword(array) {
     return str;
 }
 
+function handleCheckBoxChange() {
+    checkCount = 0;
+    allCheckBox.forEach( (checkbox) => {
+        if(checkbox.checked)
+            checkCount++;
+    });
+
+    //special condition
+    if(passwordLength < checkCount ) {
+        passwordLength = checkCount;
+        handleSlider();
+    }
+}
+
