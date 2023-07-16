@@ -14,6 +14,7 @@ const generateBtn = document.querySelector(".generateButton");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 
+
 //initially
 let password = "";
 let passwordLength = 10;
@@ -142,7 +143,6 @@ inputSlider.addEventListener('input', (e) => {
 copyBtn.addEventListener('click', () => {
     if(passwordDisplay.value)
         copyContent();
-    
 })
 
 generateBtn.addEventListener('click', () => {
@@ -161,7 +161,7 @@ generateBtn.addEventListener('click', () => {
     //remove old password
     password = "";
 
-     //let's put the stuff mentioned by checkboxes
+    //let's put the stuff mentioned by checkboxes
 
     // if(uppercaseCheck.checked) {
     //     password += generateUpperCase();
@@ -193,7 +193,6 @@ generateBtn.addEventListener('click', () => {
     if(symbolsCheck.checked)
         funcArr.push(generateSymbol);
 
-
     //compulsory addition
     for(let i=0; i<funcArr.length; i++) {
         password += funcArr[i]();
@@ -206,7 +205,6 @@ generateBtn.addEventListener('click', () => {
         console.log("randIndex" + randIndex);
         password += funcArr[randIndex]();
     }
-
     console.log("Remaining adddition done");
     //shuffle the password
     password = shufflePassword(Array.from(password));
