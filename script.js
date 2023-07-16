@@ -160,3 +160,21 @@ generateBtn.addEventListener('click', () => {
     console.log("Starting the Journey");
     //remove old password
     password = "";
+
+
+    let funcArr = [];
+
+    if(uppercaseCheck.checked)
+        funcArr.push(generateUpperCase);
+
+    if(lowercaseCheck.checked)
+        funcArr.push(generateLowerCase);
+
+    if(numbersCheck.checked)
+        funcArr.push(generateRandomNumber);
+
+    if(symbolsCheck.checked)
+        funcArr.push(generateSymbol);
+
+
+    
