@@ -32,3 +32,29 @@ function handleSlider() {
     const max = inputSlider.max;
     inputSlider.style.backgroundSize = ( (passwordLength - min)*100/(max - min)) + "% 100%"
 }
+
+function setIndicator(color) {
+    indicator.style.backgroundColor = color;
+    indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
+}
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function generateRandomNumber() {
+    return getRndInteger(0,9);
+}
+
+function generateLowerCase() {  
+       return String.fromCharCode(getRndInteger(97,123))
+}
+
+function generateUpperCase() {  
+    return String.fromCharCode(getRndInteger(65,91))
+}
+
+function generateSymbol() {
+    const randNum = getRndInteger(0, symbols.length);
+    return symbols.charAt(randNum);
+}
