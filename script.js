@@ -194,4 +194,16 @@ generateBtn.addEventListener('click', () => {
         funcArr.push(generateSymbol);
 
 
+    //compulsory addition
+    for(let i=0; i<funcArr.length; i++) {
+        password += funcArr[i]();
+    }
+    console.log("COmpulsory adddition done");
+
+    //remaining adddition
+    for(let i=0; i<passwordLength-funcArr.length; i++) {
+        let randIndex = getRndInteger(0 , funcArr.length);
+        console.log("randIndex" + randIndex);
+        password += funcArr[randIndex]();
+    }
     
