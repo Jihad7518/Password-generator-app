@@ -144,3 +144,19 @@ copyBtn.addEventListener('click', () => {
         copyContent();
     
 })
+
+generateBtn.addEventListener('click', () => {
+    //none of the checkbox are selected
+
+    if(checkCount == 0) 
+        return;
+
+    if(passwordLength < checkCount) {
+        passwordLength = checkCount;
+        handleSlider();
+    }
+
+    // let's start the jouney to find new password
+    console.log("Starting the Journey");
+    //remove old password
+    password = "";
